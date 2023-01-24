@@ -44,6 +44,7 @@ The app uses fetch requests to retrieve card data information. I have also built
 * Error handling
 * Option to sort by set
 * Add to wishlist - req DB
+* Styling!
 
 # Installation
 
