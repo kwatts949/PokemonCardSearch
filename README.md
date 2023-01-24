@@ -2,26 +2,30 @@
 A child-safe app that allows you to search for cards from the most recent Pokemon TCG set and see prices.
 <div>
 
-<h5 align="center">
+<h3 align="center">
 <a href='https://github.com/kwatts949/PokemonCardSearch/blob/main/README.md#Tech'> Tech </a> <span> · </span>
 <a href='https://github.com/kwatts949/PokemonCardSearch/blob/main/README.md#Spec'> Spec </a> <span> · </span>
 <a href='https://github.com/kwatts949/PokemonCardSearch/blob/main/README.md#requirements'> Requirements </a> <span> · </span>
 <a href='https://github.com/kwatts949/PokemonCardSearch/blob/main/README.md#Installation'> Installation </a><span> · </span>
 <a href='https://github.com/kwatts949/PokemonCardSearch/blob/main/README.md#Running-locally'> Running locally</a>
-<h5>
+<h3>
+
 </div>
 
 # Tech
 ![Image](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Image](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 ![Image](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white)
+![Image](https://img.shields.io/badge/Cypress-17202C?style=for-the-badge&logo=cypress&logoColor=white)
+![Image](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![Image](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
 # Spec
 
 An app built for my son, who is a Pokemon Card game fanatic. He is always asking how much certain cards are, so that he can expand his collection. I wanted to create a safe environment for him to check card prices and see certain information about each card.
   
 <div align='center'>
-<img src="/public/images/" width="100%" height="100%" />
+<img src="/public/images/V1.png" width="50%" height="60%" />
 </div>
   
 # Requirements
