@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import Display from "./Display";
+import CurrencyConverter from "./CurrencyConverter";
 
 const Navbar = () => {
   const [pokemonName, setPokemonName] = useState("");
@@ -23,7 +24,7 @@ const Navbar = () => {
         });
         setPokemonIChooseYou(true);
       });
-      console.log(pokemonData)
+    console.log(pokemonData);
   };
 
   return (
@@ -43,7 +44,8 @@ const Navbar = () => {
             <h3>Please select a Pokemon</h3>
           ) : (
             <>
-              <Display props={pokemonData} />
+              {/*<Display props={pokemonData} />*/}
+              <CurrencyConverter props={pokemonData.price}/>
             </>
           )}
         </div>
