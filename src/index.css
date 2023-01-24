@@ -3,7 +3,7 @@
   justify-content: center;
   text-align: center;
   font-family: "Pokemon Solid";
-  font-size: 25px;
+  font-size: 20px;
   letter-spacing: 4px;
   flex-direction: column;
   background-color: lightblue;
@@ -14,8 +14,8 @@
 
 .navbar input {
   margin: 0;
-  width: 250px;
-  height: 40px;
+  width: 200px;
+  height: 45px;
   border-radius: 10px;
   border: 1px solid;
 }
@@ -32,13 +32,19 @@
   color: black;
 }
 
+.navbar button:hover {
+  cursor:pointer;
+  background-color: red;
+  color: white;
+}
+
 .display {
   display: flex;
   height: 10%;
   flex-direction: column;
   font-size: small;
   font-family: "Trebuchet MS";
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 img {

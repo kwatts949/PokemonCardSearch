@@ -5,7 +5,12 @@ import CurrencyConverter from "./CurrencyConverter";
 
 const Navbar = () => {
   const [pokemonName, setPokemonName] = useState("");
-  const [pokemonData, setPokemonData] = useState("");
+  const [pokemonData, setPokemonData] = useState({
+    name: "",
+    image: "",
+    price: "",
+    rarity: "",
+  });
   const [pokemonIChooseYou, setPokemonIChooseYou] = useState(false);
 
   const pokemonSearch = () => {
@@ -23,8 +28,8 @@ const Navbar = () => {
           price: res.data.data[0].cardmarket.prices.avg7,
         });
         setPokemonIChooseYou(true);
+        setPokemonName("")
       });
-    console.log(pokemonData);
   };
 
   return (
@@ -33,10 +38,13 @@ const Navbar = () => {
         <div className="navbar">
           <h1>Pokemon Card Search App</h1>
           <input
+            id="input"
+            value={pokemonName}
             type="text"
             placeholder="Please enter a card name"
             onChange={(e) => {
-              setPokemonName(e.target.value);
+              setPokemonName(e.target.value)
+              
             }}
           />
           <button onClick={pokemonSearch}>Search for cards!</button>
