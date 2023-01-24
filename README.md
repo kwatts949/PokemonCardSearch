@@ -39,8 +39,6 @@ An app built for my son, who is a Pokemon Card game fanatic. He is always asking
 
 # Installation
 
-## Frontend
-
 [Clone this repo](https://github.com/kwatts949/PokemonCardSearch)
 
 In terminal (Mac), run:
@@ -53,7 +51,7 @@ npm install
 # Running locally
 
 ```
-cd tipsy_tourist_server
+cd PokemonCardSearch
 npm start
 ```
 
