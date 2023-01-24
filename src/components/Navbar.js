@@ -44,8 +44,7 @@ const Navbar = () => {
             <h3>Please select a Pokemon</h3>
           ) : (
             <>
-              {/*<Display props={pokemonData} />*/}
-              <CurrencyConverter props={pokemonData.price}/>
+              <Display props={pokemonData} />
             </>
           )}
         </div>
