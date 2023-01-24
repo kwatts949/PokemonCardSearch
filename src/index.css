@@ -7,7 +7,7 @@
   letter-spacing: 4px;
   flex-direction: column;
   background-color: lightblue;
-  height: 300px;
+  height: 200px;
   width: 100%;
   align-items: center;
 }
@@ -30,4 +30,13 @@
   letter-spacing: 4px;
   background-color: red;
   color: black;
+}
+
+.display {
+  display: flex;
+  height: 10%;
+  flex-direction: column;
+  font-size: small;
+  font-family: "Trebuchet MS";
+  margin-top: 20px;
 }
