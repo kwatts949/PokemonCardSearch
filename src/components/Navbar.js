@@ -1,7 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
 import Display from "./Display";
-import CurrencyConverter from "./CurrencyConverter";
 
 const Navbar = () => {
   const [pokemonName, setPokemonName] = useState("");

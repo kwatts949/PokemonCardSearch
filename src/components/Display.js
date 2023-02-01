@@ -8,7 +8,7 @@ const Display = (props) => {
       <h3>Set: {props.props.set}</h3>
       <h3>Rarity: {props.props.rarity}</h3>
       <CurrencyConverter props={props.props.price}/>
-      <img src={props.props.image} />
+      <img alt='Pokemon Card' src={props.props.image} />
     </div>
   );
 };
