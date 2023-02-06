@@ -1,11 +1,16 @@
+h1 {
+  font-family: "Pokemon Solid";
+  letter-spacing: 4px;
+}
+
 .navbar {
   display: flex;
   justify-content: center;
   text-align: center;
-  font-family: "Pokemon Solid";
+  font-family: "Courier new";
   font-size: 20px;
   letter-spacing: 4px;
-  flex-direction: column;
+  flex-direction: row;
   background-color: lightblue;
   height: 200px;
   width: 100%;
@@ -13,7 +18,7 @@
 }
 
 .navbar input {
-  margin: 0;
+  margin: 10px;
   width: 200px;
   height: 45px;
   border-radius: 10px;
@@ -26,7 +31,7 @@
   border-radius: 10px;
   border: 1px solid;
   margin: 10px;
-  font-family: "Pokemon Solid";
+  font-family: "Courier new";
   letter-spacing: 4px;
   background-color: red;
   color: black;
@@ -38,15 +43,22 @@
   color: white;
 }
 
+.navbar select {
+  width: 200px;
+  height: 40px
+}
 .display {
+  justify-content: center;
+  flex-direction: column;
   display: flex;
   height: 10%;
-  flex-direction: column;
   font-size: small;
-  font-family: "Trebuchet MS";
-  margin-top: 50px;
+  font-family: "Courier New";
+  margin-top: 10px;
 }
 
 img {
-  height: 300px;
+  height: 200px;
+  width: 150px;
+  float:inline-end
 }

@@ -11,11 +11,13 @@ const Navbar = () => {
     rarity: "",
   });
   const [pokemonIChooseYou, setPokemonIChooseYou] = useState(false);
+  const [pokemonSet, setPokemonSet] = useState("crown*");
 
   const pokemonSearch = () => {
+    console.log(pokemonSet)
     axios
       .get(
-        `https://api.pokemontcg.io/v2/cards?q=name:${pokemonName}&orderBy=-set.releaseDate`
+        `https://api.pokemontcg.io/v2/cards?q=name:${pokemonName}* set.name:${pokemonSet}`
       )
       //.then((res) => console.log(res))
       .then((res) => {
@@ -27,35 +29,48 @@ const Navbar = () => {
           price: res.data.data[0].cardmarket.prices.avg7,
         });
         setPokemonIChooseYou(true);
-        setPokemonName("")
+        setPokemonName("");
       });
   };
 
   return (
     <header>
       <div>
-        <div className="navbar">
           <h1>Pokemon Card Search App</h1>
+          <div className="navbar">   
           <input
             id="input"
             value={pokemonName}
             type="text"
             placeholder="Please enter a card name"
             onChange={(e) => {
-              setPokemonName(e.target.value)
-              
+              setPokemonName(e.target.value);
             }}
-          />
+          />  
+          <label for="set">Choose a set:</label>
+
+          <select
+            name="set"
+            id="set"
+            onChange={(e) => setPokemonSet(e.target.value)}
+          >
+            <option value="crown*">Latest Set</option>
+            <option value="crown*">Crown Zenith</option>
+            <option value="scarlet*">Scarlett and Violet</option>
+            <option value="silver*">Silver Tempest</option>
+            <option value="origin*">Lost Origin</option>
+          </select>
           <button onClick={pokemonSearch}>Search for cards!</button>
+          </div>
+          <div className="Display">
           {!pokemonIChooseYou ? (
-            <h3>Please select a Pokemon</h3>
+            <h3>Enter a card name</h3>
           ) : (
             <>
               <Display props={pokemonData} />
             </>
           )}
         </div>
-        <div className="Display"></div>
       </div>
     </header>
   );
