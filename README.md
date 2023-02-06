@@ -25,9 +25,11 @@ A child-safe app that allows you to search for cards from the most recent Pokemo
 A very simple app built for my son, who is a Pokemon Card game fanatic. He is always asking how much certain cards are, so that he can expand his collection. I wanted to create a safe environment for him to check card prices and see selected information about each card.
   
 The app uses fetch requests to retrieve card data information including the 7-day price average. I have also built in a currency converter which fetches current exchange rate data to convert EUR to GBP so that prices are displayed in the appropriate currency using the current rate.
+
+Latest update 6/2/23: User can select card by set.
   
 <div align='center'>
-<img src="/public/images/V1.png" width="50%" height="60%" />
+<img src="/public/images/V2.png" width="50%" height="60%" />
 </div>
   
 # Requirements

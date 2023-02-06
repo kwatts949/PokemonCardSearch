@@ -59,6 +59,10 @@ const Navbar = () => {
             <option value="scarlet*">Scarlett and Violet</option>
             <option value="silver*">Silver Tempest</option>
             <option value="origin*">Lost Origin</option>
+            <option value="astral*">Astral Radiance</option>
+            <option value="brilliant*">Brilliant Stars</option>
+            <option value="fusion*">Fusion Strike</option>
+            <option value="go*">Pokemon Go!</option>
           </select>
           <button onClick={pokemonSearch}>Search for cards!</button>
           </div>

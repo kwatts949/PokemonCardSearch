@@ -1,6 +1,7 @@
 h1 {
-  font-family: "Pokemon Solid";
+  font-family: "Courier New";
   letter-spacing: 4px;
+  font: size 30px;
 }
 
 .navbar {
@@ -11,8 +12,7 @@ h1 {
   font-size: 20px;
   letter-spacing: 4px;
   flex-direction: row;
-  background-color: lightblue;
-  height: 200px;
+  height: 100px;
   width: 100%;
   align-items: center;
 }
@@ -54,11 +54,11 @@ h1 {
   height: 10%;
   font-size: small;
   font-family: "Courier New";
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 img {
-  height: 200px;
-  width: 150px;
+  height: 396px;
+  width: 284px;
   float:inline-end
 }
