@@ -14,30 +14,36 @@ const Navbar = () => {
   const [pokemonSet, setPokemonSet] = useState("crown*");
 
   const pokemonSearch = () => {
-    console.log(pokemonSet)
+    // console.log(pokemonSet);
+    setPokemonData({ name: "", image: "", price: "", rarity: "" });
     axios
       .get(
         `https://api.pokemontcg.io/v2/cards?q=name:${pokemonName}* set.name:${pokemonSet}`
       )
-      //.then((res) => console.log(res))
+      //.then((res) => console.log(res.data.data.length))
       .then((res) => {
-        setPokemonData({
-          name: res.data.data[0].name,
-          set: res.data.data[0].set.name,
-          image: res.data.data[0].images.small,
-          rarity: res.data.data[0].rarity,
-          price: res.data.data[0].cardmarket.prices.avg7,
-        });
+        res.data.data.length === 0 ? (
+          <div>try a different combo</div>
+        ) : (
+          setPokemonData({
+            name: res.data.data[0].name,
+            set: res.data.data[0].set.name,
+            image: res.data.data[0].images.small,
+            rarity: res.data.data[0].rarity,
+            price: res.data.data[0].cardmarket.prices.avg7,
+          })
+        );
         setPokemonIChooseYou(true);
         setPokemonName("");
+        // console.log(pokemonData);
       });
-  };
+  };  
 
   return (
     <header>
       <div>
-          <h1>Pokemon Card Search App</h1>
-          <div className="navbar">   
+        <h1>Pokemon Card Search App</h1>
+        <div className="navbar">
           <input
             id="input"
             value={pokemonName}
@@ -46,13 +52,13 @@ const Navbar = () => {
             onChange={(e) => {
               setPokemonName(e.target.value);
             }}
-          />  
-          <label for="set">Choose a set:</label>
+          />
 
           <select
             name="set"
             id="set"
             onChange={(e) => setPokemonSet(e.target.value)}
+            required
           >
             <option value="crown*">Latest Set</option>
             <option value="crown*">Crown Zenith</option>
@@ -65,10 +71,12 @@ const Navbar = () => {
             <option value="go*">Pokemon Go!</option>
           </select>
           <button onClick={pokemonSearch}>Search for cards!</button>
-          </div>
-          <div className="Display">
+        </div>
+        <div className="Display">
           {!pokemonIChooseYou ? (
             <h3>Enter a card name</h3>
+          ) : pokemonData.image === "" ? (
+            <h3>No results found, try a different combo</h3>
           ) : (
             <>
               <Display props={pokemonData} />
