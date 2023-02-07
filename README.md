@@ -1,5 +1,5 @@
 # PokemonCardSearch
-A child-safe app that allows you to search for cards from the most recent Pokemon TCG set and see prices.
+A child-safe app that allows you to search for cards from the most recent Pokemon TCG sets and see prices.
 <div>
 
 <h3 align="center">
@@ -26,10 +26,12 @@ A very simple app built for my son, who is a Pokemon Card game fanatic. He is al
   
 The app uses fetch requests to retrieve card data information including the 7-day price average. I have also built in a currency converter which fetches current exchange rate data to convert EUR to GBP so that prices are displayed in the appropriate currency using the current rate.
 
-Latest update 6/2/23: User can select card by set.
+Latest update 7/2/23 Error handling complete for no results. Streamline design.
+6/2/23: User can select card by set.
   
 <div align='center'>
-<img src="/public/images/V2.png" width="50%" height="60%" />
+<img src="/public/images/V3.png" width="50%" height="60%" />
+<img src="/public/images/Errors.png" width="50%" height="60%" />
 </div>
   
 # Requirements
@@ -40,11 +42,11 @@ Latest update 6/2/23: User can select card by set.
 * Can see rarity of card.
 * Can see price of card.
 * Can see card name.
+* Error handling
+* Option to sort by set
   
 # To do
   
-* Error handling
-* Option to sort by set
 * Add to wishlist - req DB
 * Styling!
 
