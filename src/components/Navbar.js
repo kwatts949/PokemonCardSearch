@@ -34,7 +34,7 @@ const Navbar = () => {
           })
         );
         setPokemonIChooseYou(true);
-        setPokemonName("");
+        // setPokemonName("");
         // console.log(pokemonData);
       });
   };  
