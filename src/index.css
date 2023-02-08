@@ -5,16 +5,17 @@ h1, h3 {
 }
 
 .navbar {
-  display: flex;
+  display: inline-block;
   justify-content: center;
   text-align: center;
   font-family: "Courier new";
   font-size: 20px;
   letter-spacing: 4px;
   flex-direction: row;
-  height: 100px;
+  height: 70px;
   width: 100%;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .navbar input {
@@ -26,19 +27,20 @@ h1, h3 {
   border: 1px solid;
 }
 
-.navbar button {
+button {
+  display: inline-block;
   width: 200px;
   height: 45px;
   border-radius: 10px;
   border: 1px solid;
-  margin: 10px;
+  margin-top: 20px;
   font-family: "Courier new";
   letter-spacing: 4px;
   background-color: red;
-  color: black;
+  color: black;;
 } 
 
-.navbar button:hover {
+button:hover {
   cursor:pointer;
   background-color: red;
   color: white;
@@ -52,10 +54,12 @@ h1, h3 {
   border-radius: 10px;
   border: 1px solid;
 }
+
 .display {
   justify-content: center;
   flex-direction: column;
-  display: flex;
+  flex-wrap: wrap;
+  display: inline-block;
   height: 10%;
   font-size: small;
   font-family: "Courier New";

@@ -73,9 +73,9 @@ const Navbar = () => {
             <option value="fusion*">Fusion Strike</option>
             <option value="go*">Pokemon Go!</option>
           </select>
-          <button onClick={pokemonSearch}>Search for cards!</button>
         </div>
-        <div className="Display">
+        <div className="navbar"> <button onClick={pokemonSearch}>Search for cards!</button></div>
+        <div className="display">
           {!pokemonIChooseYou ? (
             <h3>Enter a card name</h3>
           ) : error ? (
