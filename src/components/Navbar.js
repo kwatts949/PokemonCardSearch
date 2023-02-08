@@ -12,32 +12,34 @@ const Navbar = () => {
   });
   const [pokemonIChooseYou, setPokemonIChooseYou] = useState(false);
   const [pokemonSet, setPokemonSet] = useState("crown*");
+  const [error, setError] = useState(false);
 
   const pokemonSearch = () => {
     // console.log(pokemonSet);
-    setPokemonData({ name: "", image: "", price: "", rarity: "" });
+    //setPokemonData({ name: "", image: "", price: "", rarity: "" });
     axios
       .get(
         `https://api.pokemontcg.io/v2/cards?q=name:${pokemonName}* set.name:${pokemonSet}`
       )
       //.then((res) => console.log(res.data.data.length))
       .then((res) => {
-        res.data.data.length === 0 ? (
-          <div>try a different combo</div>
-        ) : (
-          setPokemonData({
-            name: res.data.data[0].name,
-            set: res.data.data[0].set.name,
-            image: res.data.data[0].images.small,
-            rarity: res.data.data[0].rarity,
-            price: res.data.data[0].cardmarket.prices.avg7,
-          })
-        );
+        res.data.data.length > 0
+          ? setPokemonData(
+              {
+                name: res.data.data[0].name,
+                set: res.data.data[0].set.name,
+                image: res.data.data[0].images.small,
+                rarity: res.data.data[0].rarity,
+                price: res.data.data[0].cardmarket.prices.avg7,
+              },
+              setError(false)
+            )
+          : setError(true);
         setPokemonIChooseYou(true);
         // setPokemonName("");
-        // console.log(pokemonData);
+        console.log(pokemonData);
       });
-  };  
+  };
 
   return (
     <header>
@@ -61,6 +63,7 @@ const Navbar = () => {
             required
           >
             <option value="crown*">Latest Set</option>
+            <option value="*">Any</option>
             <option value="crown*">Crown Zenith</option>
             <option value="scarlet*">Scarlett and Violet</option>
             <option value="silver*">Silver Tempest</option>
@@ -75,12 +78,12 @@ const Navbar = () => {
         <div className="Display">
           {!pokemonIChooseYou ? (
             <h3>Enter a card name</h3>
-          ) : pokemonData.image === "" ? (
-            <h3>No results found, try a different combo</h3>
-          ) : (
+          ) : error ? (
             <>
-              <Display props={pokemonData} />
+              <h3>No results found, try a different combo</h3>
             </>
+          ) : (
+            <Display props={pokemonData} />
           )}
         </div>
       </div>
