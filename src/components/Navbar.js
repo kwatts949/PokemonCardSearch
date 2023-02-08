@@ -19,7 +19,7 @@ const Navbar = () => {
     //setPokemonData({ name: "", image: "", price: "", rarity: "" });
     axios
       .get(
-        `https://api.pokemontcg.io/v2/cards?q=name:${pokemonName}* set.name:${pokemonSet}`
+        `https://api.pokemontcg.io/v2/cards?q=name:${pokemonName}* set.name:${pokemonSet}&orderBy=-set.releaseDate`
       )
       //.then((res) => console.log(res.data.data.length))
       .then((res) => {
@@ -62,8 +62,8 @@ const Navbar = () => {
             onChange={(e) => setPokemonSet(e.target.value)}
             required
           >
-            <option value="crown*">Latest Set</option>
-            <option value="*">Any</option>
+            <option value="crown*">Current Set</option>
+            <option value="*">Most recent version</option>
             <option value="crown*">Crown Zenith</option>
             <option value="scarlet*">Scarlett and Violet</option>
             <option value="silver*">Silver Tempest</option>
