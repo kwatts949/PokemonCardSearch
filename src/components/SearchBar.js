@@ -55,7 +55,6 @@ const Navbar = () => {
               setPokemonName(e.target.value);
             }}
           />
-
           <select
             name="set"
             id="set"
