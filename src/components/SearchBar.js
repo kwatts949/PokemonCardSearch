@@ -15,13 +15,10 @@ const Navbar = () => {
   const [error, setError] = useState(false);
 
   const pokemonSearch = () => {
-    // console.log(pokemonSet);
-    //setPokemonData({ name: "", image: "", price: "", rarity: "" });
     axios
       .get(
         `https://api.pokemontcg.io/v2/cards?q=name:${pokemonName}* set.name:${pokemonSet}&orderBy=-set.releaseDate`
       )
-      //.then((res) => console.log(res.data.data.length))
       .then((res) => {
         res.data.data.length > 0
           ? setPokemonData(
@@ -36,7 +33,6 @@ const Navbar = () => {
             )
           : setError(true);
         setPokemonIChooseYou(true);
-        // setPokemonName("");
         console.log(pokemonData);
       });
   };
@@ -63,8 +59,8 @@ const Navbar = () => {
           >
             <option value="crown*">Current Set</option>
             <option value="*">Most recent version</option>
+            <option value="scarlet*">Scarlett and Violet (Coming Soon!)</option>
             <option value="crown*">Crown Zenith</option>
-            <option value="scarlet*">Scarlett and Violet</option>
             <option value="silver*">Silver Tempest</option>
             <option value="origin*">Lost Origin</option>
             <option value="astral*">Astral Radiance</option>
